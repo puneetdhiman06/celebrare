@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+#main {
+  padding: 0% 5%;
+}
+#svg {
+  width: 90%;
+  height: 90%;
+  margin-top: 15%;
+  animation: girl 2.5s infinite alternate ease;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+@-webkit-keyframes girl {
+  from {
+    transfrom: translate(0%, -8%);
+  }
+  to {
+    transform: translate(0%, 8%);
+  }
+}
+
+#wish {
+  margin: 15% 0% 0% 0%;
+  color: #808080;
+  font-size: 200%;
+  font-family: Brush Script MT, Brush Script Std, cursive;
+  text-align: center;
+}
+#text {
+  color: #979292;
+  font-size: 130%;
+  margin-bottom: 7%;
+}
+.quote {
+  color: #979292;
+  font-size: 130%;
+  border: 1px solid #979292;
+  border-radius: 15px;
+  padding: 5%;
+  width: 90%;
+  height: 5rem;
+  margin-bottom: 2%;
+}
+#btn-1 {
+  background-color: #ffbda7;
+  border-radius: 15px;
+  border: none;
+  padding: 10px;
+  width: 80px;
+  height: 40px;
+  color: white;
+  float: right;
+  position: relative;
+  top: 60%;
+}
