@@ -1,9 +1,47 @@
 * {
   margin: 0;
   padding: 0;
+  color: #808080;
 }
+p {
+  font-size: 170%;
+}
+h1 {
+  font-size: 300%;
+}
+h2 {
+  font-size: 200%;
+}
+h3 {
+  font-size: 170%;
+  font-weight: 100;
+}
+
 #main {
-  padding: 0% 5%;
+  width: 100%;
+  height: 48rem;
+}
+#wish-div {
+  float: left;
+  width: 49%;
+}
+#svg-div {
+  float: right;
+  width: 49%;
+}
+.left {
+  float: left;
+  width: 49%;
+}
+.right {
+  float: right;
+  width: 49%;
+}
+#wish {
+  margin: 50% 0% 0% 0%;
+  text-align: center;
+  font-size: 400%;
+  font-family: Brush Script MT, Brush Script Std, cursive;
 }
 #svg {
   width: 90%;
@@ -21,30 +59,98 @@
     transform: translate(0%, 8%);
   }
 }
-
-#wish {
-  margin: 15% 0% 0% 0%;
-  color: #808080;
-  font-size: 200%;
-  font-family: Brush Script MT, Brush Script Std, cursive;
-  text-align: center;
-}
 #text {
-  color: #979292;
   font-size: 130%;
   margin-bottom: 7%;
 }
+#contents-span {
+  text-align: center;
+}
+#crush-span {
+  font-size: 180%;
+  font-weight: bold;
+}
+#contents-box {
+  float: left;
+  width: 27%;
+  border: 1px solid black;
+  border-radius: 25px;
+  padding: 3%;
+  background-color: #f8f8f8;
+}
+#express-span {
+  float: right;
+  font-weight: bold;
+}
+#txt-content {
+  float: right;
+  width: 64%;
+}
 .quote {
-  color: #979292;
   font-size: 130%;
   border: 1px solid #979292;
   border-radius: 15px;
   padding: 5%;
-  width: 90%;
-  height: 5rem;
-  margin-bottom: 2%;
+  width: 80%;
+  height: 60%;
 }
-#btn-1 {
+.quote-1 {
+  font-size: 130%;
+  border: 1px solid #979292;
+  border-radius: 15px;
+  padding: 5%;
+  width: 80%;
+  height: 60%;
+}
+#box {
+  margin: 3% 3%;
+  border: 1px solid black;
+  width: 93%;
+  height: 30rem;
+}
+#txt-2 {
+  margin: 45%;
+  font-size: 110%;
+}
+.card-box {
+  margin: 5% auto;
+  border: 1px solid black;
+  width: 50%;
+  height: 90%;
+  border-radius: 10px;
+}
+/* containers */
+#container {
+  margin: 0% 5% 0% 5%;
+}
+#container-2 {
+  margin: 0% 3%;
+  color: #808080;
+}
+#container-3 {
+  margin-top: 4%;
+  width: 100%;
+  height: 27rem;
+}
+#container-4 {
+  width: 100%;
+}
+#container-5 {
+  margin-top: 2rem;
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 100%;
+}
+#container-7 {
+  margin: 0% 3%;
+}
+#container-8 {
+  margin-top: 5%;
+}
+
+/* buttons */
+.btn-1 {
   background-color: #ffbda7;
   border-radius: 15px;
   border: none;
@@ -54,5 +160,97 @@
   color: white;
   float: right;
   position: relative;
-  top: 60%;
+  top: 7%;
+  left: 4%;
+}
+#btn-4 {
+  display: none;
+}
+#btn-2 {
+  background-color: #e66755;
+  border: 0px;
+  border-radius: 7px;
+  color: white !important;
+  width: 30%;
+  height: 6rem;
+  margin-left: 35%;
+  font-size: 170%;
+}
+.btn-3 {
+  float: right;
+  border: none;
+  background-color: #ff9c8e;
+  border-radius: 10px;
+  width: 3rem;
+  height: 3rem;
+  margin: 95% 0.5rem 0.5rem 0rem;
+}
+/* carousel */
+.carousel {
+  position: relative;
+  height: 42rem;
+  width: 100%;
+  margin: 0 auto;
+}
+.carousel-image {
+  width: 100%;
+  height: 100%;
+}
+.carousel-track-container {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-track {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+  height: 100%;
+  transition: transform 250ms ease-in;
+}
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+.carousel-button-l {
+  left: -40px;
+}
+.carousel-button-r {
+  right: -40px;
+}
+.carousel-button img {
+  width: 12px;
+}
+.carousel-nav {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+.carousel-indicator {
+  border: 0;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(0, 0, 0, 0.3);
+  margin: 0 12px;
+  cursor: pointer;
+}
+.carousel-indicator.current-slide {
+  background-color: rgba(0, 0, 0, 0.75);
+  transform: scale(2);
+}
+.is-hidden {
+  display: none;
 }
