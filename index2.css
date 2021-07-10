@@ -125,9 +125,6 @@
     width: 80%;
     margin: 0 auto;
   }
-  .btn-3 {
-    margin-top: 135%;
-  }
   .carousel-nav {
     display: flex;
     justify-content: center;
@@ -141,5 +138,19 @@
     margin: 0% 0.2%;
     cursor: pointer;
     z-index: 1;
+  }
+  .carousel-indicator.current-slide {
+    transform: scale(2);
+  }
+  #box {
+    height: 20rem;
+  }
+  #container-7 {
+    height: 60rem;
+  }
+  #btn-2 {
+    height: 9%;
+    width: 90%;
+    margin-left: 5%;
   }
 }

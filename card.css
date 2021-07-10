@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.e-card-container {
+  width: 100%;
+  height: 100%;
+  background-color: #2e517d;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  perspective: 1000px;
+}
+.e-card-cover {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #345b8c;
+  transform-style: preserve-3d;
+  transform-origin: left;
+  transition-delay: 1s;
+}
+.flip {
+  transform: rotateY(-180deg);
+  transition: 2s ease;
+}
+figure {
+  margin: 0;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+figure.e-card-front {
+  background: red;
+}
+figure.e-card-back {
+  background: green;
+  transform: rotateY(180deg);
+}
+@media only screen and (max-width: 768px) {
+}
