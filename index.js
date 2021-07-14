@@ -1,3 +1,4 @@
+function carousel(){
 const track = document.querySelector('.carousel-track');
 const slides = Array.from(track.children);
 const nextButton = document.querySelector('.carousel-button-r');
@@ -24,7 +25,6 @@ const flipFunc = (flip,removeFlip)=>{
     setTimeout(() => {
         flip.classList.add('flip')
     }, 300);
-    
 }
 //
 const updateDots = (currentDot,targetDot) => {
@@ -79,11 +79,6 @@ nextButton.addEventListener('click',e=>{
     flipFunc(flipNext,removeFlip);
 })
 
-
-
-
-
-
 dotsNav.addEventListener('click',e=>{
 const targetDot = e.target.closest('button');
 
@@ -93,9 +88,32 @@ const currentSlide=track.querySelector('.current-slide');
 const currentDot = dotsNav.querySelector('.current-slide');
 const targetIndex = dots.findIndex(dot => dot === targetDot);
 const targetSlide = slides[targetIndex];
-const flip1 = currentSlide.querySelector('.e-card-cover');
+
 moveToSlide(track,currentSlide,targetSlide);
 updateDots(currentDot,targetDot);
 hideShowarrows(slides,prevButton,nextButton,targetIndex);
- flip1.classList.add('flip');
+const removeFlip = currentSlide.querySelector('.e-card-cover');
+const flip = targetSlide.querySelector('.e-card-cover');
+flipFunc(flip,removeFlip)
 })
+}
+                                     //scroll button//
+//Get the button
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
